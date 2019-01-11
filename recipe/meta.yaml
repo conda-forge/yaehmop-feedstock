@@ -17,10 +17,11 @@ build:
 requirements:
   build:
     - cmake
-    - lapack
-    - blas
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
+  host:
+    - lapack
+    - blas
   run:
     - lapack
     - blas
