@@ -19,12 +19,6 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
-  host:
-    - lapack
-    - blas
-  run:
-    - lapack
-    - blas
 
 test:
   commands:
