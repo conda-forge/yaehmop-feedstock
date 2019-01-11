@@ -16,8 +16,14 @@ build:
 
 requirements:
   build:
+    - cmake
+    - lapack
+    - blas
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
+  run:
+    - lapack
+    - blas
 
 test:
   commands:
