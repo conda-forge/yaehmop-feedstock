@@ -11,7 +11,7 @@ source:
   sha256: 8517627fa7ca14af71064bbff32f1d6077459aa0759923cc3486234b7996b218
 
 build:
-  number: 1001
+  number: 1002
   skip: True  # [win]
 
 requirements:
@@ -19,6 +19,12 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
+  host:
+    - blas 1.1 openblas
+    - openblas
+  run:
+    - blas 1.1 openblas
+    - openblas
 
 test:
   commands:
