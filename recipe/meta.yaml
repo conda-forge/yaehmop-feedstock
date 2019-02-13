@@ -1,6 +1,6 @@
 {% set name = "yaehmop" %}
 {% set version = "2018.12.1" %}
-{% set variant = "openblas" %}
+#{% set variant = "openblas" %}
 
 package:
   name: {{ name|lower }}
@@ -22,12 +22,12 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
-  host:
-    - blas 1.1 {{ variant }}
-    - openblas
-  run:
-    - blas 1.1 {{ variant }}
-    - openblas
+#  host:
+#    - blas 1.1 {{ variant }}
+#    - openblas
+#  run:
+#    - blas 1.1 {{ variant }}
+#    - openblas
 
 test:
   commands:
