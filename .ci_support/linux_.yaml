@@ -8,3 +8,8 @@ docker_image:
 - condaforge/linux-anvil-comp7
 fortran_compiler:
 - gfortran
+openblas:
+- 0.3.3
+pin_run_as_build:
+  openblas:
+    max_pin: x.x.x
