@@ -14,8 +14,8 @@ source:
 build:
   number: 1002
   skip: True  # [win]
-  features:
-    - blas_{{ variant }}
+#  features:
+#    - blas_{{ variant }}
 
 requirements:
   build:
