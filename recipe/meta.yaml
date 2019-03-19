@@ -1,6 +1,5 @@
 {% set name = "yaehmop" %}
 {% set version = "2019.03.1" %}
-{% set variant = "openblas" %}
 
 package:
   name: {{ name|lower }}
@@ -12,10 +11,9 @@ source:
   sha256: c93cd0ec1905b273e390fdea81848d0ef808a25021b27f8e053b36c23616a0bf
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
   features:
-    - blas_{{ variant }}
 
 requirements:
   build:
@@ -23,11 +21,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
   host:
-    - blas 1.1 {{ variant }}
-    - openblas
+    - libblas
+    - libcblas
   run:
-    - blas 1.1 {{ variant }}
-    - openblas
 
 test:
   commands:
