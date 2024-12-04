@@ -11,7 +11,7 @@ source:
   sha256: c93cd0ec1905b273e390fdea81848d0ef808a25021b27f8e053b36c23616a0bf
 
 build:
-  number: 5
+  number: 6
   skip: true  # [win and vc<14]
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - make  # [not win]
     - ninja  # [win]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('fortran') }}
   host:
     - libblas
